@@ -14,14 +14,54 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("Trunk", "onCreate");
+        takePicture();
+        sharePicture();
+        showGallary();
+        showInfo();
 
-       Button buttonCamera = (Button) findViewById(R.id.button_camera);
+    }
+
+    public void takePicture(){
+        Button buttonCamera = (Button) findViewById(R.id.button_camera);
         buttonCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "camera clicked", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    public void showGallary(){
+        Button buttonGallary = (Button) findViewById(R.id.button_garally);
+        buttonGallary.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "gallary clicked", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    public void showInfo(){
+        Button buttonInfo = (Button) findViewById(R.id.button_info);
+        buttonInfo.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Info clicked", Toast.LENGTH_LONG).show();
             }
         });
 
+    }
+
+    public void sharePicture(){
+        Button buttonShare = (Button) findViewById(R.id.button_share);
+        buttonShare.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "share clicked", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
